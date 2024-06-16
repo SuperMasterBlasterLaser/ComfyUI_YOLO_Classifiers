@@ -55,8 +55,10 @@ class YOLOClassify:
     CATEGORY = "SuperMasterBlasterLaser/ComfyUI_YOLO_Classifiers"
 
     def classify(self, yolo_classifier_model, image_to_classify):
+        image_to_classify = image_to_classify.movedim(3, 1)
+
         transform = transforms.Compose([
-            transforms.ToPILImage(mode='LA')
+            transforms.Resize(size=(640, 640))
         ])
 
         img = transform(image_to_classify).unsqueeze(0)
