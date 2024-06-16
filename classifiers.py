@@ -54,7 +54,7 @@ class YOLOClassify:
     CATEGORY = "SuperMasterBlasterLaser/ComfyUI_YOLO_Classifiers"
 
     def classify(self, yolo_classifier_model, image_to_classify):
-        result = yolo_classifier_model(image_to_classify)
+        result = yolo_classifier_model.predict(image_to_classify)
 
         class_name = None
         for r in result:
