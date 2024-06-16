@@ -43,8 +43,8 @@ class YOLOClassify:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "yolo_classifier_model": "YOLO_CLASSIFIER_MODEL",
-                "image_to_classify": "IMAGE"
+                "yolo_classifier_model": ("YOLO_CLASSIFIER_MODEL",),
+                "image_to_classify": ("IMAGE",)
             }
         }
 
