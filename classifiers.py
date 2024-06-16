@@ -56,12 +56,7 @@ class YOLOClassify:
 
     def classify(self, yolo_classifier_model, image_to_classify):
         image_to_classify = image_to_classify.permute(0, 3, 1, 2)
-
-        if yolo_classifier_model.model.fp16:
-            image_to_classify = image_to_classify.half()
-        else:
-            image_to_classify = image_to_classify.float()
-
+        image_to_classify = image_to_classify.half()
         image_to_classify = image_to_classify.squeeze(0)
         transform = transforms.Compose([
             transforms.Resize(size=(224, 224))
