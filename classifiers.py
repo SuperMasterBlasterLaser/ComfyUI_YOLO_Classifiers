@@ -35,7 +35,7 @@ class YOLOClassifierModelLoader:
         model_path = folder_paths.get_full_path("ultralytics_classifiers", model_name)
 
         model = YOLO(model_path)
-        return model
+        return (model,)
 
 
 class YOLOClassify:
@@ -62,4 +62,4 @@ class YOLOClassify:
             class_name = r.names[top1]
             break
 
-        return class_name
+        return (class_name,)
