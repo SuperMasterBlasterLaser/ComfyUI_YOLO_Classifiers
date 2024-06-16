@@ -22,7 +22,7 @@ class YOLOClassifierModelLoader:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "model_name": cls.model_names
+                "model_name": (cls.model_names,)
             }
         }
 
