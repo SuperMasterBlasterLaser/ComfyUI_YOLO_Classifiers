@@ -56,7 +56,7 @@ class YOLOClassify:
 
     def classify(self, yolo_classifier_model, image_to_classify):
         transform = transforms.Compose(
-            [transforms.ToTensor(), transforms.Resize(size=(640, 640))]
+            [transforms.Resize(size=(640, 640))]
         )
 
         img_tensor = transform(image_to_classify).unsqueeze(0)
