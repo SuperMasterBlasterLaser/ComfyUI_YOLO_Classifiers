@@ -58,7 +58,7 @@ class YOLOClassify:
         image_to_classify = image_to_classify.permute(0, 3, 1, 2)
         image_to_classify = image_to_classify.squeeze(0)
         transform = transforms.Compose([
-            transforms.Resize(size=(640, 640))
+            transforms.Resize(size=(224, 224))
         ])
 
         img = transform(image_to_classify).unsqueeze(0)
