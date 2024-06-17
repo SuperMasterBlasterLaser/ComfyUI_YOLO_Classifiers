@@ -1,0 +1,15 @@
+[project]
+name = "comfyui_yolo_classifiers"
+description = "Nodes:YOLO Classifier Model Loader, YOLO Classify."
+version = "1.0.0"
+license = "LICENSE"
+dependencies = ["ultralytics==8.2.32"]
+
+[project.urls]
+Repository = "https://github.com/SuperMasterBlasterLaser/ComfyUI_YOLO_Classifiers"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI_YOLO_Classifiers"
+Icon = ""
