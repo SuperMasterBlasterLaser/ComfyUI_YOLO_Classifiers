@@ -10,6 +10,6 @@ Repository = "https://github.com/SuperMasterBlasterLaser/ComfyUI_YOLO_Classifier
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "supermasterblasterlaser"
 DisplayName = "ComfyUI_YOLO_Classifiers"
 Icon = ""
